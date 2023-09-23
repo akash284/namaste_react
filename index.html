@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title> Namaste react </title>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body> 
+        <div id="root">not rendeered
+            <!-- <h1>Namaste EveryOne</h1> -->
+        </div>
+        <!-- want this inside my root -->
+        <!-- <div id="container">
+            <h1>heading 1</h1>
+            <h2> heading 2</h2>
+        </div>  -->
+      
+    
+    <!--
+
+
+     how to do the same thing using react
+     to create the h1 tag using js 
+     <script>
+       const heading= document.createElement("h1");
+       heading.innerHTML="Namaste EveryOne from javascript! ";
+    //    how to put this inside the root
+    //using append child(i can pick up the root element )
+      const root=document.getElementById("root");
+      root.appendChild(heading);
+
+     </script>
+   -->
+  
+   <!-- injected react into my code -->
+   <script crossorigin 
+   src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin 
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+ 
+<!-- react start -->
+<script src="app.js">
+</script>
+</body>
+</html>
+
+<!-- 
+//    h1 tag comes from the core library react
+const heading=React.createElement("h1",
+{
+    id:"title"
+},"Namaste Everyone");
+
+  const heading1=React.createElement("h1",
+  {
+    id:"id1",
+  
+ },"heading 1");
+  console.log(heading);
+  const heading2=React.createElement("h2",
+  {
+    id:"id1",
+   
+  },"heading 2");
+  
+
+  //when we have to pass multiple chilren then we have to use 3rd parameter as [](array)
+  const container=React.createElement("div",{
+    id:"container"
+  },[heading1,heading2])
+  
+//  if i want to put these heding inside my root
+
+//   how to tell the react that this is the root element, this is the place where i want my react to run 
+//  createroot and now i want to put the h1 tag inside my root(will create the divid='root' as root)
+//how we want to modify the data in the dom thats the use of second library
+//reactdom.createRoot tells whats the root element inside my react(to tell the react that is my root so (document.getElemet(root)))
+const root= ReactDOM.createRoot(document.getElementById("root"));
+
+//want to put the heading into react
+//passing the react elt  inside the root and render injects the code into our dom(into the root)
+//everything happens inside root 
+
+// root.render(heading);
+root.render(container); -->
